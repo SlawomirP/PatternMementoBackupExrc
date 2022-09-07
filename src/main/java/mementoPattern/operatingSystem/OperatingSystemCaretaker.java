@@ -1,13 +1,14 @@
 package mementoPattern.operatingSystem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class OperatingSystemCaretaker {
 
     //na tym obiekcie beda przeprowadzane operacje
-    private OperatingSystemMemento operatingSystemMemento;
+
     //lista do przechowywania backupow
-    List<OperatingSystemMemento> backups;
+    List<OperatingSystemMemento> backups = new ArrayList<>();
 
     //metody dodawania i wyciagania z listy
     public void addToBackupsList(OperatingSystemMemento operatingSystemMemento){
@@ -16,5 +17,9 @@ public class OperatingSystemCaretaker {
     public OperatingSystemMemento getBackup(int index){
         System.out.println("Backup: " + backups.get(index).toString());
         return backups.get(index);
+    }
+
+    public int getListSize(){
+        return backups.size();
     }
 }

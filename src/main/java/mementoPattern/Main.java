@@ -20,7 +20,9 @@ public class Main {
 
         Thread.sleep(3000);
 
+
         operatingSystemCaretaker.addToBackupsList(operatinSystem.save());
+
         operatinSystem.createBackup();
 
         Thread.sleep(3000);
